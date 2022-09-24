@@ -50,7 +50,35 @@
 # a = int(input())
 # s=str(a)
 # print(f'{s[1]}{s[0]}{s[2]}')
+#7
+# import math
+# for i in range(100, 999, 1):
+#     if ((str((i % 10)) + str((math.floor(((i - (i % 10))) / 10)))) == "237"): 
+#         print(i)
+#8
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# #а
+# print((a>100) and (b>100))
+# #б
+# print (a % 2 == 0) and (b % 2 == 0) and (c % 2 == 0)
+# #в
+# print(a>0) or (b>0)
+# #г
+# print((a%3==0 and b%3==0 and c%3==0))
+# #д
+# if a % 2 == 0 and b % 2 == 0 and  c % 2 == 0:
+#     print("NO")
+#     exit()
+# if a % 2 == 0 or b % 2 == 0 or c % 2 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+# #е
+# print((a<0) or (b<0) or (c<0))
 #9
+
 # n = int(input())
 # sum_of_factorials = 1
 # curr_factorial = 1
@@ -88,6 +116,19 @@
 # for i in range(1, len(a), 2):
 #     a[i - 1], a[i] = a[i], a[i - 1]
 # print(' '.join([str(i) for i in a]))
+# 14
+# from past.builtins import xrange
+# def palin_generator():
+#     """Generates palindromic numbers."""
+# 
+#     palindromes=[]
+# 
+#     for count in xrange(1000):
+#         n = str(count)
+#         if n == n[::-1]:
+#             palindromes.append(n)
+# 
+#     print (palindromes)  
 # 15
 # def main(l):
 #     print(*(i for i in l if i[-1] == '0'))
@@ -112,7 +153,25 @@
 # print(*grades, sep=';')
 # 18
 # print([i**2 if i%2 == 0 else i+2 for i in range(1,21)])
-# 21
+#19
+# def conv(n,r):
+#     if n<r:
+#         return "0123456789ABCDEF"[n]
+#     else:
+#         k=n%r
+#         return conv(n//r,r)+"0123456789ABCDEF"[k]
+#         
+# print(conv(12,2))
+#20
+# l = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711]
+# 
+# divisible_by_7 = []
+# 
+# for i in l:
+#     if (i%7==0):
+#         divisible_by_7.append(i)
+# print(divisible_by_7)
+#21
 # s = 'катя,маша,таня,саша'
 # print(s.title())
 # 22
@@ -125,6 +184,35 @@
 # print(a | b)
 # print(a & b)
 # print(a - b)
+#24
+# import re
+# a = '''She sells sea shells on the sea shore;
+# The shells that she sells are sea shells I'm sure.
+# So if she sells sea shells on the sea shore,
+# I'm sure that the shells are sea shore shells.'''
+#  
+# print(len({x for x in re.findall(r'\w+', a)}))
+#25
+# d = dict()
+# with open("C:/Users/danii/Desktop/Текстовый документ.txt", 'r') as file:
+#     for line in file:
+#         for word in line.strip().split():
+#             d[word] = d.get(word, -1) + 1
+#             print(d[word], end=' ')
+#26
+# from collections import Counter
+# 
+# text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+# ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+# nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+# esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+# in culpa qui officia deserunt mollit anim id est laborum."""
+# 
+# myLine = text.split()  
+# d = Counter(myLine)  
+# max_encounters = max(d.values())  
+# most_common_word = min(word for word, count in d.items() if count == max_encounters)  
+# print(most_common_word) 
 # 27
 # def main():
 #     with open('input.txt') as f:
