@@ -18,13 +18,13 @@ class college():
 
 # Сериализация
     def serialize(self):  # Сериализация номера библиотеки
-        with open('C:\\Users\\danii\\Desktop\\ZIMIN\\test_pickuli.pkl', 'wb') as f:
+        with open('C:\\Users\\danii\\Desktop\\object class\\test_pickuli.pkl', 'wb') as f:
             pickle.dump(self.nomer, f)
         f.closed
 
 # Десериализация
     def deserialize(self):  # Десериализация номера библиотеки
-        with open('C:\\Users\\danii\\Desktop\\ZIMIN\\test_pickuli.pkl', 'rb') as f:
+        with open('C:\\Users\\danii\\Desktop\\object class\\test_pickuli.pkl', 'rb') as f:
             college = pickle.load(f)
         f.closed
         return college
