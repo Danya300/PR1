@@ -184,3 +184,17 @@ IS3 = group()
 IS3.start()
 IS3.stop()
 IS3.get_info()
+##dataclass
+@dataclass
+class Employee:
+    name: str
+    IS3: str = 'Python'
+
+
+@dataclass
+class Developer(Employee):
+    stepenia: int = 0
+
+
+Alex = Developer('Александр', 'Програмист', 2600)
+print(Alex)  
