@@ -1,4 +1,5 @@
-
+from dataclasses import dataclass
+from collections import namedtuple
 import pickle
 import requests
 
@@ -197,4 +198,8 @@ class Developer(Employee):
 
 
 Alex = Developer('Александр', 'Програмист', 2600)
-print(Alex)  
+print(Alex)
+##Коллекции в Python
+Features = namedtuple('Features', ['age', 'gender', 'name'])
+row = Features(age=22, gender='male', name='Alex')
+print(row.gender)
