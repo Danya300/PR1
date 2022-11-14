@@ -218,3 +218,39 @@ class Stack(Generic[T]):
 
     def pop(self) -> T:
         return self.items.pop()
+import re
+  
+def main():
+    passwd = 'Student123@'
+    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!#%*?&]{6,20}$"
+      
+    # compiling regex
+    pat = re.compile(reg)
+      
+    # searching regex                 
+    mat = re.search(pat, passwd)
+      
+    # validating conditions
+    if mat:
+        print("Password is valid.")
+    else:
+        print("Password invalid !!")
+  
+# Driver Code     
+if __name__ == '__main__':
+    main()
+username="studentikt"
+password="student123@"
+from getpass import getpass
+uname=input('Имя пользователья - ')
+uname=uname.strip()
+if uname!=username:
+    print("неправильно")
+else:
+    pword=getpass("Пароль - ")
+    if pword==password:
+        print("Добро пожаловать")
+    else:
+        print("Неправильный пароль")
+
+
